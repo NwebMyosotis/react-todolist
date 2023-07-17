@@ -1,0 +1,26 @@
+.button {
+  margin-right: 0.5rem;
+  overflow: hidden;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d6c596;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #8d8265;
+}
+
+.underBar {
+  border-bottom: 4px solid #d6c596;
+}
+
+.darkmodeBtn {
+  color: rgb(195 209 170);
+}
+
+.darkmodeUnderBar {
+  border-bottom: 4px solid rgb(195 209 170);
+}

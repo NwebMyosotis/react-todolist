@@ -1,0 +1,59 @@
+.todoBox {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.todoBox input {
+  accent-color: #645251;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.todoBox label {
+  font-size: 1.2rem;
+}
+
+.todoBox label:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.darkmodeTodoBox input {
+  accent-color: rgb(215, 245, 154);
+}
+
+.isDone {
+  margin-right: 5%;
+  text-align: left;
+}
+
+.uncheckedLabel {
+  display: flex;
+  width: 85%;
+}
+
+.checkedLabel {
+  display: flex;
+  width: 85%;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.button {
+  width: 10%;
+  height: 100%;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.darkmodeTodoBox button {
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: gray;
+}
