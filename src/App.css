@@ -10,7 +10,7 @@
 
 .darkmode {
   background-color: rgb(53, 49, 60);
-  color: white;
+  /* color: white; */
 }
 
 .todoArea {
@@ -22,6 +22,7 @@
   justify-content: space-between;
   border-radius: 1.5rem;
   box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
 }
 
 .todosAreaDark {
@@ -38,12 +39,14 @@
   justify-content: space-between;
   color: #d6c596;
   font-weight: bold;
+  transition: all 0.3s;
 }
 
 .main {
   overflow: auto;
   height: 70%;
   padding: 1.5rem;
+  transition: all 0.3s;
 }
 
 .footer {
@@ -53,4 +56,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
 }

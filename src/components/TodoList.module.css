@@ -3,16 +3,19 @@
   display: flex;
   margin-bottom: 1rem;
   align-items: center;
+  transition: all 0.3s;
 }
 
 .todoBox input {
   accent-color: #645251;
   width: 1.5rem;
   height: 1.5rem;
+  transition: all 0.3s;
 }
 
 .todoBox label {
   font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
 .todoBox label:hover {
@@ -22,6 +25,10 @@
 
 .darkmodeTodoBox input {
   accent-color: rgb(215, 245, 154);
+}
+
+.darkmodeTodoBox label {
+  color: white;
 }
 
 .isDone {
@@ -41,12 +48,13 @@
   color: gray;
 }
 
-.button {
+.todoBox button {
   width: 10%;
   height: 100%;
   background: none;
   border: none;
   font-size: 1.2rem;
+  transition: all 0.3s;
 }
 
 .darkmodeTodoBox button {
