@@ -41,6 +41,7 @@
 }
 
 .main {
+  overflow: auto;
   height: 70%;
   padding: 1.5rem;
 }
