@@ -1,9 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./TodoList.module.css";
 import { TodosContext } from "../contexts/TodosContext";
 import { BsFillTrash3Fill } from "react-icons/bs";
 
-const TodoList = ({ todo, del, forUpdate }) => {
+const TodoList = ({ todo, del }) => {
   const { mode, todos, setTodos } = useContext(TodosContext);
   const [isChecked, setIsChecked] = useState(todo.checked);
   const handleClick = () => {
@@ -16,14 +16,6 @@ const TodoList = ({ todo, del, forUpdate }) => {
     thisTodo[index].checked = event.target.checked;
     setTodos([...thisTodo]);
   };
-
-  // useEffect(() => {
-  //   const thisIndex = todos.findIndex((item) => item.id === id);
-  //   setTodos((prev) => {
-  //     prev[thisIndex].checked = isChecked;
-  //     return prev;
-  //   });
-  // }, [isChecked]);
 
   return (
     <div className={`${styles.todoBox} ${mode ? styles.darkmodeTodoBox : ""}`}>

@@ -24,9 +24,12 @@ function App() {
   const [mode, setMode] = useState(getMode);
 
   const localTodos = JSON.stringify(todos);
-  useEffect(() => window.localStorage.setItem("todos", localTodos), [todos]);
+  useEffect(
+    () => window.localStorage.setItem("todos", localTodos),
+    [localTodos]
+  );
   const localMode = JSON.stringify(mode);
-  useEffect(() => window.localStorage.setItem("mode", localMode, [mode]));
+  useEffect(() => window.localStorage.setItem("mode", localMode, [localMode]));
 
   const todoAdd = (arr) => {
     setTodos((prev) => {

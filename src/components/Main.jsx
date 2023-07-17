@@ -1,11 +1,10 @@
 import TodoList from "./TodoList";
 import styles from "./Main.module.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { TodosContext } from "../contexts/TodosContext";
 
 const Main = ({ del }) => {
   const todosContext = useContext(TodosContext);
-  const [checked, setChecked] = useState();
   const { todos, filterd } = todosContext;
   const deleteInfo = (info) => {
     return del(info);
@@ -13,35 +12,16 @@ const Main = ({ del }) => {
 
   const AllFilterd = ({ items }) =>
     items.map((item) => (
-      <TodoList
-        key={item.id}
-        todo={item}
-        del={deleteInfo}
-        forUpdate={setChecked}
-      />
+      <TodoList key={item.id} todo={item} del={deleteInfo} />
     ));
   const ActiveFiltered = ({ items }) =>
     items
       .filter((item) => item.checked === false)
-      .map((item) => (
-        <TodoList
-          key={item.id}
-          todo={item}
-          del={deleteInfo}
-          forUpdate={setChecked}
-        />
-      ));
+      .map((item) => <TodoList key={item.id} todo={item} del={deleteInfo} />);
   const CompletedFiltered = ({ items }) =>
     items
       .filter((item) => item.checked === true)
-      .map((item) => (
-        <TodoList
-          key={item.id}
-          todo={item}
-          del={deleteInfo}
-          forUpdate={setChecked}
-        />
-      ));
+      .map((item) => <TodoList key={item.id} todo={item} del={deleteInfo} />);
 
   return (
     <div className="main">
